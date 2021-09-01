@@ -44,6 +44,54 @@ namespace CRUD.Series
            Console.ReadLine();
         }
 
+        private static void ExcluirSeries()
+        {
+            Console.Write("Digite o id da série: ");
+            int indeceSerie = int.Parse(Console.ReadLine());
+
+            repositorio.Exclui(indeceSerie);
+        }
+
+        private static void VisualizarSeries()
+        {
+            Console.Write("Digite o id da série: ");
+            int indeceSerie = int.Parse(Console.ReadLine());
+
+            var serie = repositorio.RetornaPorId(indeceSerie);
+
+            Console.WriteLine(serie);
+        }
+
+        private static void AtualizarSeries()
+        {
+            Console.Write("Digite o id da série: ");
+            int indeceSerie = int.Parse(Console.ReadLine());
+
+            foreach(int i in Enum.GetValues(typeof(Generos)))
+            {
+                Console.WriteLine("{0}-{1}", i, Enum.GetName(typeof(Generos),i));
+            }
+            Console.Write("Digite o gênero entre as opções acima: ");
+            int entradaGeneros = int.Parse(Console.ReadLine());
+
+            Console.Write("Digite o titulo da série: ");
+            string entradaTitulo = Console.ReadLine();
+
+            Console.Write("Digite o ano de inicio da série: ");
+            int entradaAno = int.Parse(Console.ReadLine());
+
+            Console.Write("Digite a descrição da série: ");
+            string entradaDescricao = Console.ReadLine();
+
+            Serie atualizaSerie = new Serie(id: indeceSerie,
+                                            genero: (Generos)entradaGeneros,
+                                            titulo: entradaTitulo,
+                                            ano: entradaAno,
+                                            descricao: entradaDescricao);
+
+            repositorio.Atualiza(indeceSerie,atualizaSerie);
+        }
+
         private static void ListarSeries()
         {
             Console.WriteLine("Listar Series");
@@ -57,11 +105,13 @@ namespace CRUD.Series
             }
             foreach (var serie in lista)
             {
+                var excluido = serie.retornaExcluido();
+
                 Console.WriteLine("#ID {0}: - {1}", serie.retornaId(), serie.retornaTitulo());
             }
         }
 
-        
+
 
         private static string ObterOpcaoUsuario()
         {

@@ -1,0 +1,5 @@
+C:\Users\roger.DESKTOP-FT9COCG\Desktop\DIO\C#\CrudSeries\CRUD\obj\Debug\net5.0\CRUD.csproj.AssemblyReference.cache
+C:\Users\roger.DESKTOP-FT9COCG\Desktop\DIO\C#\CrudSeries\CRUD\obj\Debug\net5.0\CRUD.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\roger.DESKTOP-FT9COCG\Desktop\DIO\C#\CrudSeries\CRUD\obj\Debug\net5.0\CRUD.AssemblyInfoInputs.cache
+C:\Users\roger.DESKTOP-FT9COCG\Desktop\DIO\C#\CrudSeries\CRUD\obj\Debug\net5.0\CRUD.AssemblyInfo.cs
+C:\Users\roger.DESKTOP-FT9COCG\Desktop\DIO\C#\CrudSeries\CRUD\obj\Debug\net5.0\CRUD.csproj.CoreCompileInputs.cache
