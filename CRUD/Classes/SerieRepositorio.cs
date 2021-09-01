@@ -1,41 +1,36 @@
 using System;
 using System.Collections.Generic;
-using CRUD.Series.Interfaces; 
+using CRUD.Series.Interfaces;
 
 namespace CRUD.Series
 {
     public class SerieRepositorio : IRepositorio<Serie>
     {
-        private List<Series> listaSeries = new List<Series>();
-
-        public void Atualiza(int id, Series objeto)
+        private List<Serie> listaSerie = new List<Serie>();
+        public void Atualiza(int id, Serie objeto)
         {
-            listaSeries[id] = objto;
+            listaSerie[id] = objeto;
+        }
+        public void Exclui(int id)
+        {
+            listaSerie[id].Excluir();
+        }
+        public void Insere(Serie objeto)
+        {
+            listaSerie.Add(objeto);
+        }
+        public List<Serie> Lista()
+        {
+            return listaSerie;
+        }
+        public int ProximoId()
+        {
+            return listaSerie.Count;
+        }
+        public Serie RetornaPorId(int id)
+        {
+            return listaSerie[id];
         }
 
-         public void Excluir(int id)
-        {
-            listaSeries[id].Excluir();
-        }
-
-         public void Insere(Series objeto)
-        {
-            listaSeries.Add(objeto)
-        }
-
-         public List<Series> Lista()
-        {
-           return listaSeries;
-        }
-
-         public int ProximoId()
-        {
-            return listaSeries.Count;
-        }
-
-         public Series RetornaPorId(int id)
-        {
-            return listaSeries[id];
-        }
     }
 }

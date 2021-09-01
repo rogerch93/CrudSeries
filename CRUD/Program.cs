@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace CRUD
+namespace CRUD.Series
 {
     class Program
     {
@@ -60,6 +60,8 @@ namespace CRUD
                 Console.WriteLine("#ID {0}: - {1}", serie.retornaId(), serie.retornaTitulo());
             }
         }
+
+        
 
         private static string ObterOpcaoUsuario()
         {
