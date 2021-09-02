@@ -111,7 +111,35 @@ namespace CRUD.Series
             }
         }
 
+        private static void InserirSeries()
+        {
+            Console.WriteLine("Inserir nova série");
 
+            foreach(int i in Enum.GetValues(typeof(Generos)))
+            {
+                Console.WriteLine("{0}-{1}", i,Enum.GetName(typeof(Generos),i));
+            }
+            Console.WriteLine("Digite o genero entre as opções a cima: ");
+            int entradaGeneros = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("Digite o titulo da série :");
+            string entradaTitulo = Console.ReadLine();
+
+            Console.WriteLine("Digite o ano de inicio da série: ");
+            int entradaAno = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("Digite a descrição da série: ");
+            string entradaDescricao = Console.ReadLine();
+
+            Serie novaSerie = new Serie (id: repositorio.ProximoId(),
+                                        genero: (Generos)entradaGeneros,
+                                        titulo: entradaTitulo,
+                                        ano: entradaAno,
+                                        descricao: entradaDescricao);
+
+            repositorio.Insere(novaSerie);
+
+        }
 
         private static string ObterOpcaoUsuario()
         {
