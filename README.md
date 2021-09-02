@@ -3,7 +3,7 @@
 ## Crud de Series (Digital Inovation One)
 
 ### App console para Séries de tv.
-> - Crud de console que salva informações das Series em uma lista (em memória).
+> #### Crud de console que salva informações das Series em uma lista (em memória).
 
 ### O App Console contém as seguintes funções:
 - Listar Séries
